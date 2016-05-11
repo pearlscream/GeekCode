@@ -1,15 +1,14 @@
-Участники:
+РЈС‡Р°СЃС‚РЅРёРєРё::
 
-Будько Дмитрий: team-lead, Java backend developer
-Ярощук Тарас: Java backend developer
-Гудзенко Евгений: Frontend developer, UI/UX
-Василенко Александр: frontend lead, UI/UX 
+Р”РјРёС‚СЂРёР№ Р‘СѓРґСЊРєРѕ: team-lead, Java backend developer
+РўР°СЂР°СЃ РЇСЂРѕС‰СѓРє: Java backend developer
+Р“СѓРґР·РµРЅРєРѕ Р•РІРіРµРЅРёР№: Frontend developer, UI/UX
+Р’Р°СЃРёР»РµРЅРєРѕ РђР»РµРєСЃР°РЅРґ: frontend lead, UI/UX
 
 
-Идея проекта:
+РРґРµСЏ РїСЂРѕРµРєС‚Р°:
 
-Идея пока отсутствует.
+РРґРµСЏ РїРѕРєР° РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚.
 
-Делегат:
-
-Будько Дмитрий, dimonich41@gmail.com
+Р”РµР»РµРіР°С‚
+Р‘СѓРґСЊРєРѕ Р”РјРёС‚СЂРёР№ , dimonich41@gmail.com
