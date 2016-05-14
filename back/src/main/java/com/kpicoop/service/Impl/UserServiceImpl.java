@@ -6,6 +6,8 @@ import com.kpicoop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -35,5 +37,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User saveUser(User user) {
         return userRepository.saveAndFlush(user);
+    }
+
+    @Override
+    public List<User> findByProjectId(int projectId) {
+        return userRepository.findByProjectId(projectId);
     }
 }
