@@ -10,4 +10,5 @@ public interface FileService {
     File findByPath(String path);
     File saveFile(File file);
 
+    File updateText(int file_id, String text);
 }

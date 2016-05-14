@@ -14,8 +14,10 @@ public class Project {
     @Column(name = "projectId")
     private Integer id;
 
+    private String title;
     private String description;
 
+    private String image;
 
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
@@ -23,6 +25,7 @@ public class Project {
     private List<User> users = new ArrayList<>();
 
 
+    @JsonIgnore
     @OneToMany(mappedBy = "project")
     private List<File> files = new ArrayList<>();
 
@@ -59,5 +62,21 @@ public class Project {
 
     public void setFiles(List<File> files) {
         this.files = files;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
