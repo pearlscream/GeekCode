@@ -2,14 +2,19 @@ var app = angular.module('koya', ['ui.router']);
 
     app.config(function($stateProvider, $urlRouterProvider){
       var title = function (page) {
-        return page + ' | ITkoya';
+        return page + ' | KPIcoop';
     };
-    $urlRouterProvider.when('', '/project');
     $stateProvider
         /*project and children project elements*/
         .state('project', {
             url: "/project",
             templateUrl: 'views/project.html',
+            controller: 'projectController',
+            title: title('Project')
+        })
+        .state('main', {
+            url: "/main",
+            templateUrl: 'project.html',
             controller: 'projectController',
             title: title('Project')
         })
