@@ -1,4 +1,4 @@
-package com.bionic.exception.handlers;
+package com.kpicoop.exception.handlers;
 
 import com.bionic.exception.shift.impl.ShiftOverlapsException;
 import com.bionic.exception.shift.impl.ShiftsFromFuturePeriodException;
@@ -8,9 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-/**
- * @author Pavel Boiko
- */
+
 @ControllerAdvice
 public class ShiftExceptionsHandler {
 

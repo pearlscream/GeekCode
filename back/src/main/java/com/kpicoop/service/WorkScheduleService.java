@@ -1,12 +1,10 @@
-package com.bionic.service;
+package com.kpicoop.service;
 
 import com.bionic.model.WorkSchedule;
 
 import java.util.List;
 
-/**
- * Created by Kliakhin on 03/17/16.
- */
+
 public interface WorkScheduleService {
 
     WorkSchedule addWorkSchedule(WorkSchedule workSchedule);
