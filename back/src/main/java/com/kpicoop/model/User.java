@@ -2,7 +2,6 @@ package com.kpicoop.model;
 
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 
@@ -14,12 +13,19 @@ public class User {
     @Column(name = "userId")
     private Integer id;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date creationTime;
 
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "users")
     private List<Project> projects;
 
+    private byte[] photoFile;
+
+    private String name;
+
+    private String sname;
+
+    private String direction;
+
+    private String skills;
 
     public List<Project> getProjects() {
         return projects;
@@ -37,11 +43,43 @@ public class User {
         this.id = id;
     }
 
-    public Date getCreationTime() {
-        return creationTime;
+    public byte[] getPhotoFile() {
+        return photoFile;
     }
 
-    public void setCreationTime(Date creationTime) {
-        this.creationTime = creationTime;
+    public void setPhotoFile(byte[] photoFile) {
+        this.photoFile = photoFile;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
+    public String getSkills() {
+        return skills;
+    }
+
+    public void setSkills(String skills) {
+        this.skills = skills;
     }
 }
