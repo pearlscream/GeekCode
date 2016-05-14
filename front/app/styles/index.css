@@ -44,7 +44,7 @@ a {
   color: #3366cc;
 }
 .link-g {
-  color: #8e9597;
+  color: #333333;
 }
 .link-g-l {
   color: #cccccc;
@@ -106,7 +106,7 @@ a {
 }
 .navbar__form {
   width: 440px;
-  height: 180px;
+  height: 140px;
   position: absolute;
   top: 0;
   bottom: 0;
