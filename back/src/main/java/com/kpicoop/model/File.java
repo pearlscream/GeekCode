@@ -14,6 +14,20 @@ public class File {
 
     private byte[] file;
 
+    @ManyToOne
+    @JoinColumn(name="projectId")
+    private Project project;
+
+
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
     public Integer getId() {
         return id;
     }
