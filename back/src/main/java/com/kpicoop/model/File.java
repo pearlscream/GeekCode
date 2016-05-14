@@ -1,5 +1,7 @@
 package com.kpicoop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,12 +14,14 @@ public class File {
 
     private String path;
 
-//    private byte[] file;
+    private String text;
 
+    private String filename;
+
+    @JsonIgnore
     @ManyToOne
-    @JoinColumn(name="projectId")
+    @JoinColumn(name = "projectId")
     private Project project;
-
 
 
     public Project getProject() {
@@ -44,11 +48,20 @@ public class File {
         this.path = path;
     }
 
-//    public byte[] getFile() {
-//        return file;
-//    }
-//
-//    public void setFile(byte[] file) {
-//        this.file = file;
-//    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
 }

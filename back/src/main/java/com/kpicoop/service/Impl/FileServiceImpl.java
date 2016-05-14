@@ -14,7 +14,8 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public File findById(int id) {
-        return fileRepository.getOne(id);
+        File file = fileRepository.findOne(id);
+        return file;
     }
 
     @Override
@@ -29,7 +30,8 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public File findByPath(String path) {
-        return fileRepository.findByPath(path);
+        return null;
+//        return fileRepository.findByPath(path);
     }
 
     @Override
@@ -37,4 +39,12 @@ public class FileServiceImpl implements FileService {
         return fileRepository.saveAndFlush(file);
     }
 
+    @Override
+    public File updateText(int file_id, String text) {
+        File file = fileRepository.getOne(file_id);
+        file.setText(text);
+        fileRepository.saveAndFlush(file);
+        return file;
+
+    }
 }

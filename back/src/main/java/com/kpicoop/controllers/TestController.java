@@ -25,8 +25,8 @@ public class TestController {
 
     private ResourceLoader resourceLoader = new DefaultResourceLoader();
     @ResponseBody
-    @RequestMapping(value = "/image",  produces = "image/png")
+    @RequestMapping(value = "/image",  produces = "image/jpg")
     public Resource texture() {
-        return resourceLoader.getResource("classpath:images/Smile.png");
+        return resourceLoader.getResource("classpath:images/image.jpg");
     }
 }

@@ -6,6 +6,8 @@ import com.kpicoop.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProjectServiceImpl implements ProjectService {
 
@@ -15,6 +17,11 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project findById(int id) {
         return projectRepository.findOne(id);
+    }
+
+    @Override
+    public List<Project> getProjects() {
+        return projectRepository.findAll();
     }
 
     @Override
@@ -31,4 +38,6 @@ public class ProjectServiceImpl implements ProjectService {
     public Project saveProject(Project project) {
         return projectRepository.saveAndFlush(project);
     }
+
+
 }

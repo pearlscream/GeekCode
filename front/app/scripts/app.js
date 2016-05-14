@@ -12,44 +12,16 @@ var app = angular.module('koya', ['ui.router','ui.ace','ngAnimate']);
             controller: 'projectController',
             title: title('Project')
         })
-        .state('main', {
-            url: "/main",
-            templateUrl: 'project.html',
-            controller: 'projectController',
-            title: title('Project')
-        })
-
-              /*.state('project.it-news', {
-                  url: "/project.it-news",
-                  templateUrl: 'views/project/it-news.html',
-                  controller: 'itNewsController',
-                  title: title('IT news')
-              })
-              .state('project.technology', {
-                  url: "/project.technology",
-                  templateUrl: 'views/project/technology.html',
-                  controller: 'technologyController',
-                  title: title('Technology')
-              })
-              .state('project.projects', {
-                  url: "/project.projects",
-                  templateUrl: 'views/project/projects.html',
-                  controller: 'projectsController',
-                  title: title('Projects')
-              })
-              */
-        /*Help*/
         .state('profile', {
             url: "/profile",
             templateUrl: 'views/profile.html',
             controller: 'profileController',
             title: title('Profile')
         })
-        .state('getProject/1', {
-            url: "/project:id",
-            templateUrl: 'views/profile.html',
-            controller: 'getProjectController',
-            title: title('Project')
+        .state('project.id', {
+          url: '/:id',
+          templateUrl: 'views/project.html',
+          controller: 'idProjectController'
         })
         .state('polyana', {
             url: "/polyana",
