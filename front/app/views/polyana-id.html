@@ -1,0 +1,16 @@
+<div class="navbar__form-wrapper">
+  <form action="" class="navbar__form">
+    <h2 class="navbar__form-title">Find project</h2>
+		<h3 class="navbar__form-title" style="font-size:25px;">or</h3>
+    <a ui-sref="polyana"><button type="submit" name="button" class="navbar__form-submit">Create your project</button></a>
+  </form>
+</div>
+	<div class="polyana-container">
+		<h1 class="polyana__title">Choose project which do you like improve</h1>
+		<div class="polyana__item project-item" ng-repeat="project in projects">
+			<img ng-src="data:image/jpeg;base64,{{project.imageFile}}"  alt="" width="250" height="250" class="project-item__img">
+			<h2 class="project-item__title">{{project.title}}</h2>
+			<p class="project-item__description">{{project.description}}<a class="project-item__more-link" ng-href="#/project/{{project.id}}">...Read more</a></p>
+			<a ng-href="#/project/{{project.id}}" class="project-item__button project-item__button_blue">Choose project</a>
+		</div>
+	</div>
