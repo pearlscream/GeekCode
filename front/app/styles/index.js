@@ -75,6 +75,7 @@ export default StyleSheet.create({
     },
     "navbar__menu-item": {
         "listStyle": "none",
+        "boxSizing": "border-box",
         "height": "100%",
         "float": "left",
         "marginTop": 0,
@@ -208,10 +209,11 @@ export default StyleSheet.create({
         "color": "#666666"
     },
     "active": {
-        "backgroundColor": "white !important"
+        "backgroundColor": "white !important",
+        "textDecoration": "underline"
     },
     "active a": {
-        "color": "#333333 !important"
+        "color": "#3366cc !important"
     },
     "blog__main": {
         "width": "75%",
