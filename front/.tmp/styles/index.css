@@ -441,13 +441,90 @@ a {
 .project-item__more-link{
   color: #333;
 }
-.project-item__choose-button{
+.user-projects__item{
+  background-color: #faf9f9;
+}
+.project-item__button{
   display: block;
   float: right;
   margin-right: 20px;
-  color: #fff;
   font-size: 20px;
-  background-color: #3263f8;
   padding: 10px 13px;
   border-radius: 3px;
 }
+<<<<<<< HEAD
+=======
+.project-item__button_blue{
+  background-color: #3263f8;
+  color: #fff;
+}
+
+.project-item__button_grey{
+  background-color: #eee;
+  color: #b6b5b5;
+}
+
+/************** PROFILE   ***********/
+.profile-wrapper{
+  width: 100%;
+  position: relative;
+}
+.profile__info{
+  width: 290px;
+  min-height: calc(100vh - 63px);
+  background-color: #d7d7d7;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 60px 20px;
+  top: 0;
+  left: 0;
+}
+
+.user-info__img{
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.user-info__name{
+  text-align: center;
+  color: #282828;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user-info__faculty{
+  width: 100%;
+  color: #333;
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+.user-info__email{
+  font-size: 18px;
+  color: #999;
+  text-align: center;
+}
+
+.profile__user-projects{
+  width: 100%;
+  min-height: calc(100vh - 63px);
+  box-sizing: border-box;
+  padding: 30px;
+  padding-left: 320px;
+  background-color: #efefef;
+}
+
+.user-projects__title{
+  font-size: 30px;
+  color: #797a7b;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+>>>>>>> aa7036e9dd63658e2990379aa4d8ab9f7b829516

@@ -1,43 +1,18 @@
-<div>
-  <h2 class="well well-sm" id="app-heading">
-      Search Results
-  </h2>
-
-  <ul class="list-unstyled" id="items-list">
-      <li class="col-md-4" ng-repeat="product in ctrl.products">
-          <div class="row">
-              <div class="col-xs-4">
-                  <a ng-href="#/product/{{ product.id }}">
-                    <img ng-src="images/{{ product.thumb }}" alt="" class="img-responsive">
-                  </a>
-              </div>
-              <div class="product-description-holder col-xs-8">
-                  <h2><a ng-href="#/product/{{ product.id }}">{{ product.title }}</a></h2>
-                  <p>{{ product.description }}</p>
-              </div>
-          </div>
-          <br/>
-          <div class="row">
-              <div class="col-xs-4 text-center">
-                  <span class="badge">{{ product.timeleft }} hour left</span><br/>
-                  <small>Today 15.00</small>
-              </div>
-              <div class="col-xs-4 text-center">
-              <span class="badge">
-                <span class="glyphicon glyphicon-eye-open"></span> {{ product.watchers }}
-              </span>
-                  <br/>
-                  <small>Watchers</small>
-              </div>
-              <div class="col-xs-4 text-center">
-              <span class="badge">
-                {{ product.price | currency }}
-              </span>
-                  <br/>
-                  <small>Current price</small>
-              </div>
-          </div>
-          <hr/>
-      </li>
-  </ul>
-<div>
+<div class="profile-wrapper">
+  <div class="profile__info user-info">
+    <img src="http://lorempixel.com/160/160" alt="" width="160" height="160" class="user-info__img">
+    <h2 class="user-info__name">Alex Budko</h2>
+    <input type="text" class="user-info__faculty" value="TEF TR-42" disabled>
+    <div class="user-info__email">alexdima@kpicoop.com</div>
+  </div>
+  <div class="profile__user-projects user-projects">
+    <h1 class="user-projects__title">My projects</h1>
+    <div class="user-projects__item project-item">
+      <img src="http://lorempixel.com/200/200" alt="" width="250" height="250" class="project-item__img"> 
+      <h2 class="project-item__title">This is project title</h2>
+      <p class="project-item__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quia, atque suscipit laudantium, consequuntur molestiae nisi eveniet repellendus illum quaerat odit. Saepe quos, quibusdam officia natus quia pariatur culpa, minus <a class="project-item__more-link" href="#">...Read more</a></p>
+      <a href="#" class="project-item__button project-item__button_blue">Open project</a>
+      <a href="#" class="project-item__button project-item__button_grey">Send your code</a>
+    </div>
+  </div>
+</div>
