@@ -35,6 +35,12 @@ var app = angular.module('koya', ['ui.router','ui.ace','ngAnimate']);
             controller: 'createController',
             title: title('CreateProject')
         })
+        .state('polyana-id', {
+            url: "/polyana-id",
+            templateUrl: 'views/polyana-id.html',
+            controller: 'createController',
+            title: title('CreateProject')
+        })
 
     })
 
