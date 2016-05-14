@@ -1,4 +1,4 @@
-var app = angular.module('koya', ['ui.router','ui.ace']);
+var app = angular.module('koya', ['ui.router','ui.ace','ngAnimate']);
 
     app.config(function($stateProvider, $urlRouterProvider){
       var title = function (page) {
@@ -44,6 +44,12 @@ var app = angular.module('koya', ['ui.router','ui.ace']);
             templateUrl: 'views/profile.html',
             controller: 'profileController',
             title: title('Profile')
+        })
+        .state('getProject/1', {
+            url: "/project:id",
+            templateUrl: 'views/profile.html',
+            controller: 'getProjectController',
+            title: title('Project')
         })
         .state('polyana', {
             url: "/polyana",
