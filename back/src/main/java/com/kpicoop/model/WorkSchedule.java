@@ -1,4 +1,4 @@
-package com.bionic.model;
+package com.kpicoop.model;
 
 
 import javax.persistence.*;

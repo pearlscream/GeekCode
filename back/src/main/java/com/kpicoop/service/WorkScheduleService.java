@@ -1,6 +1,6 @@
 package com.kpicoop.service;
 
-import com.bionic.model.WorkSchedule;
+import com.kpicoop.model.WorkSchedule;
 
 import java.util.List;
 

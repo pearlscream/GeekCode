@@ -18,7 +18,7 @@ import java.util.List;
 
 @Configuration
 @EnableAsync
-@Import({com.kpicoop.config.MailConfig.class, com.kpicoop.config.PersistenceConfig.class})
+@Import({com.kpicoop.config.PersistenceConfig.class})
 @ComponentScan(basePackages = {"com.kpicoop.dao", "com.kpicoop.model",
         "com.kpicoop.service", "com.kpicoop.controllers",
         "com.kpicoop.config", "com.kpicoop.logging", "com.kpicoop.exception.handlers"},
