@@ -4,46 +4,49 @@ var app = angular.module('koya', ['ui.router']);
       var title = function (page) {
         return page + ' | ITkoya';
     };
-    $urlRouterProvider.when('', '/blog.it-news');
+    $urlRouterProvider.when('', '/project');
     $stateProvider
-        /*Blog and children blog elements*/
-        .state('blog', {
-            url: "",
-            templateUrl: 'views/blog.html',
-            controller: 'blogController',
-            title: title('Blog')
+        /*project and children project elements*/
+        .state('project', {
+            url: "/project",
+            templateUrl: 'views/project.html',
+            controller: 'projectController',
+            title: title('Project')
         })
-              .state('blog.it-koya-news', {
-                  url: "/blog.it-koya-news",
-                  templateUrl: 'views/blog/it-koya-news.html',
-                  controller: 'itKoyaNewsController',
-                  title: title('ITkoya news')
-              })
-              .state('blog.it-news', {
-                  url: "/blog.it-news",
-                  templateUrl: 'views/blog/it-news.html',
+
+              /*.state('project.it-news', {
+                  url: "/project.it-news",
+                  templateUrl: 'views/project/it-news.html',
                   controller: 'itNewsController',
                   title: title('IT news')
               })
-              .state('blog.technology', {
-                  url: "/blog.technology",
-                  templateUrl: 'views/blog/technology.html',
+              .state('project.technology', {
+                  url: "/project.technology",
+                  templateUrl: 'views/project/technology.html',
                   controller: 'technologyController',
                   title: title('Technology')
               })
-              .state('blog.projects', {
-                  url: "/blog.projects",
-                  templateUrl: 'views/blog/projects.html',
+              .state('project.projects', {
+                  url: "/project.projects",
+                  templateUrl: 'views/project/projects.html',
                   controller: 'projectsController',
                   title: title('Projects')
               })
+              */
         /*Help*/
-        .state('help', {
-            url: "/help",
-            templateUrl: 'views/help.html',
-            controller: 'helpController',
-            title: title('Help')
+        .state('profile', {
+            url: "/profile",
+            templateUrl: 'views/profile.html',
+            controller: 'profileController',
+            title: title('Profile')
         })
+        .state('polyana', {
+            url: "/polyana",
+            templateUrl: 'views/polyana.html',
+            controller: 'polyanaController',
+            title: title('Polyana')
+        })
+
     })
 
     app.run(['$rootScope','$state', '$stateParams', function ($rootScope) {

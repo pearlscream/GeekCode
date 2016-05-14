@@ -1,4 +1,4 @@
-angular.module('koya').controller('blogController', ['$scope',
+angular.module('koya').controller('projectController', ['$scope',
 function($scope) {
   $scope.templates =[
           { name: 'template1.html', url: 'views/blog/it-koya-news.html'},
