@@ -1,4 +1,4 @@
-var app = angular.module('koya', ['ui.router']);
+var app = angular.module('koya', ['ui.router','ui.ace']);
 
     app.config(function($stateProvider, $urlRouterProvider){
       var title = function (page) {

@@ -215,6 +215,9 @@ export default StyleSheet.create({
     "active a": {
         "color": "#3366cc !important"
     },
+    "ace_editor": {
+        "height": 200
+    },
     "blog__main": {
         "width": "75%",
         "float": "left"

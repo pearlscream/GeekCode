@@ -216,7 +216,7 @@ a {
 .active a {
   color: #3366cc !important;
 }
-
+.ace_editor { height: 200px; }
 /*Blog main and blog right line*/
 
 .blog__main {
