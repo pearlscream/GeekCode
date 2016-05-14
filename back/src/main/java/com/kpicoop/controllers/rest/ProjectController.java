@@ -34,11 +34,14 @@ public class ProjectController {
         return project;
     }
 
-    private ResourceLoader resourceLoader = new DefaultResourceLoader();
-
     @ResponseBody
-    @RequestMapping(value = "/image",  produces = "image/png")
-    public Resource texture() {
-        return resourceLoader.getResource("classpath:images/Smile.png");
+    @CrossOrigin(origins = "http://localhost:9000")
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public List<Project> getProjects() {
+        List<Project> projects = projectService.getProjects();
+        return projects;
     }
+
+
+
 }
