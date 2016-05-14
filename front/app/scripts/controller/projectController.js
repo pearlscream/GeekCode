@@ -9,7 +9,7 @@ angular.module('koya').controller('projectController', ['$scope','$state', '$sta
     $scope.id = $state.params.id;
     console.log($scope.id);
     if($scope.id!="undefined")
-    $http.get("http://10.55.33.56:8082/rest/api/v1/project/"+$scope.id)
+    $http.get("http://localhost:8082/rest/api/v1/projects/"+$scope.id+"/files/"+$scope.id)
     .success(function(data) {
                 $scope.projects = data;
                 console.log($scope.projects);
