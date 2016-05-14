@@ -6,12 +6,12 @@
 }
 @font-face {
   font-family: "DroidBold";
-  src: url(./fonts/DroidSans-Bold.ttf);
+  src: url(../fonts/DroidSans-Bold.ttf);
   font-weight: bold;
 }
 @font-face {
   font-family: "DroidSans";
-  src: url(./fonts/DroidSans.ttf);
+  src: url(../fonts/DroidSans.ttf);
   font-weight: normal;
 }
 
@@ -380,6 +380,73 @@ a {
   margin: 0;
 }
 .social-icons__svg {
-  width: 30px;
+  width: 40px;
   height: 30px;
+}
+
+
+/************** POLYANA   ***********/
+
+.polyana-container{
+  width: 90%;
+  margin: 0 auto;
+  background-color: #bebdbd;
+  box-sizing: border-box;
+  padding: 26px;
+  font-family: 'DroidSans';
+}
+
+.polyana__title{
+  font-size: 30px;
+  text-align: center;
+  color: #FCF8FF;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.polyana__item{
+  width: 100%;
+  padding: 30px;
+  padding-left: 310px;
+  background-color: #efefef;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  min-height: 310px;
+  border-radius: 5px;
+}
+.polyana__item:not(:last-child){
+  margin-bottom: 30px;
+}
+
+.project-item__img{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.project-item__title{
+  margin: 15px 0 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.project-item__description{
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-item__more-link{
+  color: #333;
+}
+.project-item__choose-button{
+  display: block;
+  float: right;
+  margin-right: 20px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #3263f8;
+  padding: 10px 13px;
+  border-radius: 3px;
 }
