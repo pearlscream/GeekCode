@@ -1,0 +1,39 @@
+/* Custom styles go here */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "DroidBold";
+  src: url(./fonts/DroidSans-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "DroidSans";
+  src: url(./fonts/DroidSans.ttf);
+  font-weight: normal;
+}
+
+/*
+m-c - middle center
+*/
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: DroidBold, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.main-view::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.m-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
