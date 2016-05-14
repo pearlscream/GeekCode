@@ -15,11 +15,9 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-/**
- * @author Pavel Boiko
- */
+
 @Configuration
-@EnableJpaRepositories("com.bionic.dao")
+@EnableJpaRepositories("com.kpicoop.dao")
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
 public class PersistenceConfig {

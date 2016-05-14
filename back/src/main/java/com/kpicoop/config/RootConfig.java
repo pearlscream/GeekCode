@@ -19,9 +19,9 @@ import java.util.List;
 @Configuration
 @EnableAsync
 @Import({com.kpicoop.config.MailConfig.class, com.kpicoop.config.PersistenceConfig.class})
-@ComponentScan(basePackages = {"com.bionic.dao", "com.bionic.model",
-        "com.bionic.service", "com.bionic.controllers",
-        "com.bionic.config", "com.bionic.logging", "com.bionic.exception.handlers"},
+@ComponentScan(basePackages = {"com.kpicoop.dao", "com.kpicoop.model",
+        "com.kpicoop.service", "com.kpicoop.controllers",
+        "com.kpicoop.config", "com.kpicoop.logging", "com.kpicoop.exception.handlers"},
         excludeFilters = {
                 @ComponentScan.Filter(type = FilterType.ANNOTATION, value = EnableWebMvc.class)
         })
