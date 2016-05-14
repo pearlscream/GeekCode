@@ -108,7 +108,7 @@ a {
 }
 .navbar__form {
   width: 440px;
-  height: 140px;
+  height: 160px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -122,7 +122,7 @@ a {
   font-size: 36px;
   width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 10px;
 }
 .navbar__form-input {
@@ -139,7 +139,7 @@ a {
   margin-bottom: 30px;
 }
 .navbar__form-submit {
-  width: 180px;
+  width: 250px;
   height: 42px;
   font-size: 24px;
   font-weight: bold;
