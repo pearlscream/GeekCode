@@ -1,5 +1,7 @@
 package com.kpicoop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +16,12 @@ public class Project {
 
     private String description;
 
+
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_project", joinColumns = @JoinColumn(name = "projectId"), inverseJoinColumns = @JoinColumn(name = "userId"))
     private List<User> users = new ArrayList<>();
+
 
     @OneToMany(mappedBy = "project")
     private List<File> files = new ArrayList<>();

@@ -12,7 +12,7 @@ public class File {
 
     private String path;
 
-    private byte[] file;
+//    private byte[] file;
 
     @ManyToOne
     @JoinColumn(name="projectId")
@@ -44,11 +44,11 @@ public class File {
         this.path = path;
     }
 
-    public byte[] getFile() {
-        return file;
-    }
-
-    public void setFile(byte[] file) {
-        this.file = file;
-    }
+//    public byte[] getFile() {
+//        return file;
+//    }
+//
+//    public void setFile(byte[] file) {
+//        this.file = file;
+//    }
 }

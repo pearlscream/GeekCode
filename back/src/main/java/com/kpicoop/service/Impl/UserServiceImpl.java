@@ -27,10 +27,10 @@ public class UserServiceImpl implements UserService {
         userRepository.delete(id);
     }
 
-    @Override
-    public User findByUsername(String name) {
-        return userRepository.findByUsername(name);
-    }
+//    @Override
+//    public User findByUsername(String name) {
+//        return userRepository.findByUsername(name);
+//    }
 
     @Override
     public User saveUser(User user) {
