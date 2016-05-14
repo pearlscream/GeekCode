@@ -19,6 +19,9 @@ import java.util.List;
  * v.0.1
  *
  */
+
+
+// project title photo need (active or new) author description
 @RestController
 @RequestMapping(value = "/rest/api/v1/project/")
 public class ProjectController {
@@ -41,7 +44,5 @@ public class ProjectController {
         List<Project> projects = projectService.getProjects();
         return projects;
     }
-
-
-
+    
 }
