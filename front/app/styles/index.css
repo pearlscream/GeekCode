@@ -526,3 +526,57 @@ a {
   letter-spacing: 1px;
 }
 
+/************** WORKING-AREA   ***********/
+.project-box{
+  width: 100%;
+  position: relative;
+}
+
+.project-box__project-structure{
+  width: 290px;
+  min-height: calc(100vh - 63px);
+  background-color: #9E9E9E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+
+.project-structure__list{
+  width: 200px;
+  margin: 0 auto;
+}
+
+.project-box__code-area{
+  width: 100%;
+  min-height: calc(100vh - 63px);
+  box-sizing: border-box;
+  padding: 0 30px;
+  padding-left: 290px;
+  background-color: #efefef;
+}
+
+.code_area__header{
+  background-color: #c2c2c2;
+  width: 100%;
+  overflow: hidden;
+}
+.code-area__item{
+  display: block;
+  float: left;
+  padding: 5px 7px;
+  color: #666666;
+}
+
+.code-area__item_selected{
+  background-color: #EFEFEF;
+}
+
+.code_area__content{
+  width: 100%;
+  display: none;
+}
+.code_area__content_selected{
+  display: block;
+}
