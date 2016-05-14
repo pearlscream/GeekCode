@@ -14,26 +14,26 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findById(int id) {
-        return null;
+        return userRepository.getOne(id);
     }
 
     @Override
     public User addUser(User user) {
-        return null;
+        return userRepository.saveAndFlush(user);
     }
 
     @Override
     public void delete(int id) {
-
+        userRepository.delete(id);
     }
 
-    @Override
-    public User findByUsername(String name) {
-        return null;
-    }
+//    @Override
+//    public User findByUsername(String name) {
+//        return userRepository.findByUsername(name);
+//    }
 
     @Override
     public User saveUser(User user) {
-        return null;
+        return userRepository.saveAndFlush(user);
     }
 }

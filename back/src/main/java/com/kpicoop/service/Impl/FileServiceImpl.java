@@ -14,26 +14,27 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public File findById(int id) {
-        return null;
+        return fileRepository.getOne(id);
     }
 
     @Override
     public File addFile(File file) {
-        return null;
+        return fileRepository.saveAndFlush(file);
     }
 
     @Override
     public void delete(int id) {
-
+        fileRepository.delete(id);
     }
 
     @Override
     public File findByPath(String path) {
-        return null;
+        return fileRepository.findByPath(path);
     }
 
     @Override
-    public File saveUser(File file) {
-        return null;
+    public File saveFile(File file) {
+        return fileRepository.saveAndFlush(file);
     }
+
 }

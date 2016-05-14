@@ -8,6 +8,6 @@ public interface FileService {
     File addFile(File file);
     void delete(int id);
     File findByPath(String path);
-    File saveUser(File file);
+    File saveFile(File file);
 
 }

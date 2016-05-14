@@ -19,9 +19,9 @@ import java.util.List;
 @Configuration
 @EnableAsync
 @Import({com.kpicoop.config.PersistenceConfig.class})
-@ComponentScan(basePackages = {"com.kpicoop.dao", "com.kpicoop.model",
+@ComponentScan(basePackages = {"com.kpicoop.model",
         "com.kpicoop.service", "com.kpicoop.controllers",
-        "com.kpicoop.config", "com.kpicoop.logging", "com.kpicoop.exception.handlers"},
+        "com.kpicoop.config", "com.kpicoop.logging", "com.kpicoop.exception.handlers","com.kpicoop.repositories"},
         excludeFilters = {
                 @ComponentScan.Filter(type = FilterType.ANNOTATION, value = EnableWebMvc.class)
         })

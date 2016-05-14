@@ -3,6 +3,7 @@ package com.kpicoop.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -15,6 +16,19 @@ public class User {
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationTime;
+
+    @ManyToMany(cascade=CascadeType.ALL, mappedBy="users")
+    private List<Project> projects;
+
+
+
+    public List<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
+    }
 
     public Integer getId() {
         return id;

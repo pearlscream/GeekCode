@@ -17,7 +17,7 @@ import java.util.Properties;
 
 
 @Configuration
-@EnableJpaRepositories("com.kpicoop.dao")
+@EnableJpaRepositories("com.kpicoop.repositories")
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
 public class PersistenceConfig {
