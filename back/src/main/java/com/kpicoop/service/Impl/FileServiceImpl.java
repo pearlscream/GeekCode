@@ -6,6 +6,8 @@ import com.kpicoop.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FileServiceImpl implements FileService {
 
@@ -46,5 +48,10 @@ public class FileServiceImpl implements FileService {
         fileRepository.saveAndFlush(file);
         return file;
 
+    }
+
+    @Override
+    public List<File> findByProjectId(int project_id) {
+        return fileRepository.findByProjectId(project_id);
     }
 }
