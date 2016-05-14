@@ -403,7 +403,78 @@ export default StyleSheet.create({
         "marginLeft": 0
     },
     "social-icons__svg": {
-        "width": 30,
+        "width": 40,
         "height": 30
+    },
+    "polyana-container": {
+        "width": "90%",
+        "marginTop": 0,
+        "marginRight": "auto",
+        "marginBottom": 0,
+        "marginLeft": "auto",
+        "backgroundColor": "#bebdbd",
+        "boxSizing": "border-box",
+        "paddingTop": 26,
+        "paddingRight": 26,
+        "paddingBottom": 26,
+        "paddingLeft": 26,
+        "fontFamily": "'DroidSans'"
+    },
+    "polyana__title": {
+        "fontSize": 30,
+        "textAlign": "center",
+        "color": "#FCF8FF",
+        "marginBottom": 20,
+        "letterSpacing": 1
+    },
+    "polyana__item": {
+        "width": "100%",
+        "paddingTop": 30,
+        "paddingRight": 30,
+        "paddingBottom": 30,
+        "paddingLeft": 310,
+        "backgroundColor": "#efefef",
+        "boxSizing": "border-box",
+        "position": "relative",
+        "overflow": "hidden",
+        "minHeight": 310,
+        "borderRadius": 5
+    },
+    "polyana__item:not(:last-child)": {
+        "marginBottom": 30
+    },
+    "project-item__img": {
+        "position": "absolute",
+        "top": 30,
+        "left": 30
+    },
+    "project-item__title": {
+        "marginTop": 15,
+        "marginRight": 0,
+        "marginBottom": 20,
+        "marginLeft": 0,
+        "fontSize": 24,
+        "color": "#333"
+    },
+    "project-item__description": {
+        "fontSize": 18,
+        "color": "#666",
+        "marginBottom": 20
+    },
+    "project-item__more-link": {
+        "color": "#333"
+    },
+    "project-item__choose-button": {
+        "display": "block",
+        "float": "right",
+        "marginRight": 20,
+        "color": "#fff",
+        "fontSize": 20,
+        "backgroundColor": "#3263f8",
+        "paddingTop": 10,
+        "paddingRight": 13,
+        "paddingBottom": 10,
+        "paddingLeft": 13,
+        "borderRadius": 3
     }
 });

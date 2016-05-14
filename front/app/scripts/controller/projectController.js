@@ -7,5 +7,8 @@ angular.module('koya').controller('projectController', ['$scope',
       workerPath: '/styles/'
     }
     $scope.example = 'require(rCharts)\nrPlot(mpg ~ wt, data = mtcars,type = "point")';
+    $scope.alertData = function(){
+      console.log($scope.example);
+    };
   }
 ]);
