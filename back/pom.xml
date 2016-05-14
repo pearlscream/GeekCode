@@ -154,10 +154,10 @@
             <version>${jsp.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.2.1.Final</version>
-        </dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>RELEASE</version>
+    </dependency>
 
 
 
