@@ -5,14 +5,26 @@
   margin: 0;
 }
 @font-face {
-  font-family: "DroidBold";
-  src: url(./fonts/DroidSans-Bold.ttf);
-  font-weight: bold;
+    font-family: 'droid_sans';
+    src: url('../fonts/droidsans/reg/droidsans-webfont.eot');
+    src: url('../fonts/droidsans/reg/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans/reg/droidsans-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans/reg/droidsans-webfont.svg#droid_sansregular') format('svg'),
+         url('../fonts/droidsans/reg/droidsans-webfont-webfont.woff2') format('woff2'),
+         url('../fonts/droidsans/reg/droidsans-webfont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "DroidSans";
-  src: url(./fonts/DroidSans.ttf);
-  font-weight: normal;
+    font-family: 'droid-sans';
+    src: url('../fonts/droidsans/bold/droidsans-bold-webfont.eot');
+    src: url('../fonts/droidsans/bold/droidsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans/bold/droidsans-bold-webfont.woff') format('woff'),
+         url('../fonts/droidsans/bold/droidsans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans/bold/droidsans-bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
 
 /*
@@ -22,7 +34,8 @@ m-c - middle center
 body {
   margin: 0;
   background-color: white;
-  font-family: DroidBold, sans-serif;
+  font-family: 'droid_sans';
+  font-size: 16px;
 }
 a {
   text-decoration: none;
@@ -36,4 +49,230 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+.header__container{
+  display: flex;
+  justify-content: flex-start;
+  outline: 1px solid #f00;
+}
+
+.container_paddinged{
+  padding-right: 30%;
+}
+
+.text_bold{
+  font-weight: bold;
+}
+/*******   HEADER   *******/
+.main-page-header{
+  background-color: #333;
+  height: 10vh;
+  align-items: center;
+  outline: 1px solid #f00;
+}
+.header__logo{
+  float: left;
+}
+
+/*******   MAIN BLOCK   *******/
+.main-page-content__slider{
+  position: relative;
+}
+.main-slider__list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 90vh;
+}
+.main-slider__item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-slider__item_bg{
+  background-image: url(../images/list-bg.jpg);
+  background-size: cover;
+}
+
+.main-slider__content{
+  padding-left: 3%;
+  padding-right: 43%;
+  position: relative;
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/*******   FIRST SLIDER CONTENT   *******/
+
+
+.mAbout-slide__content{
+  padding-left: 80px;
+  display: none;
+}
+.mAbout-slide__content_selected{
+  display: block;
+}
+
+
+.mAbout-slide__paragraph{
+  color: #fdfdff;
+  font-size: 1.2em;
+  border-left: 2px solid #ebebeb;
+  padding: 15px 0 15px 20px;
+}
+/*******   VAlIDATION FORM   *******/
+.validation-block{
+  width: 370px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  height: 90vh;
+}
+
+.validation-block__header{
+  background-color: #999;
+  overflow: hidden;
+}
+
+.validation-block__item{
+  width: 50%;
+  text-align: center;
+  float: left;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #999;
+  color: #575555;
+  font-size: 1.4em;
+  padding: 5px 0 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+.validation-block__item_selected{
+  background-color: #ccc;
+  color: #434443;
+}
+
+.validation-block__content{
+  display: none;
+  padding: 40px 20px 30px;
+  font-size: 1.25em;
+  color: #818789;
+}
+
+.validation-block__content_selected{
+  display: block;
+}
+
+.validation-form__input_text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #c4c2c2;
+  color: #818789;
+  margin-bottom: 30px;
+  font-family: 'droid_sans';
+}
+
+.validation-form__checkboxes{
+  margin-bottom: 25px;
+}
+
+.validation-form__checkboxes input {
+  vertical-align: top;
+  margin: 0 10px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+.validation-form__checkboxes input + label {
+  cursor: pointer;
+}
+
+
+/* Прячем оригинальный чекбокс. */
+.validation-form__checkboxes input:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.validation-form__checkboxes input:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 30px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.validation-form__checkboxes input:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background: #fff;
+  border: 1px solid #969696;
+  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.validation-form__checkboxes input:checked + label:before {
+  background: #3366cc;
+}
+
+.label_margined{
+  margin-right: 35px;
+}
+
+.validation-form__input_submit{
+  font-family: 'droid_sans';
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 6px 20px 7px;
+  border: none;
+  border-radius: 7px;
+  background-color: #267ec8;
+  cursor: pointer;
+  letter-spacing: 1px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.validation-form__input_submit + span{
+  display: inline-block;
+  margin: 0 23px;
+  vertical-align: middle;
+}
+.validation-form__facebook-log{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.facebook-login__svg{
+  width: 38px;
+  height: 38px;
+}
+.facebook-login__svg path{
+  fill: #918e89;
+}
+
+.password-link{
+  margin-top: 30px;
+  display: block;
+  color: #726c6c;
+  font-size: 0.9em;
 }
