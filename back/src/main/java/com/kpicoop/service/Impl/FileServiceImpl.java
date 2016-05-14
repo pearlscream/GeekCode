@@ -6,6 +6,10 @@ import com.kpicoop.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 @Service
 public class FileServiceImpl implements FileService {
 
@@ -14,7 +18,8 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public File findById(int id) {
-        return fileRepository.getOne(id);
+        File file = fileRepository.findOne(id);
+        return file;
     }
 
     @Override
@@ -29,12 +34,28 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public File findByPath(String path) {
-        return fileRepository.findByPath(path);
+        return null;
+//        return fileRepository.findByPath(path);
     }
 
     @Override
     public File saveFile(File file) {
         return fileRepository.saveAndFlush(file);
+    }
+
+    @Override
+    public File updateText(int file_id, String text) {
+        File file = fileRepository.getOne(file_id);
+
+        String path = file.getPath();
+        try {
+            Files.write(Paths.get(path), text.getBytes());
+        } catch (IOException e) {
+            System.out.println(path);
+            System.out.println("Nope:(");
+        }
+        return file;
+
     }
 
 }
