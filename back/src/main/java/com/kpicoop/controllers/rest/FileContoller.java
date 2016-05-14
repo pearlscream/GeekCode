@@ -19,10 +19,16 @@ public class FileContoller {
     }
 
     @RequestMapping(value = "/{file_id}", method = RequestMethod.PUT)
+    @CrossOrigin(origins = "http://localhost:9000")
     public File updateFile(@PathVariable("file_id") final int file_id, @RequestBody Map<String, Object> text) {
         File file = fileService.updateText(file_id, (String) text.get("text"));
         return file;
     }
+
+//    @RequestMapping(value = "/{file_id}", method = RequestMethod.DELETE)
+//    public void updateFile(@PathVariable("file_id") final int file_id) {
+//        fileService.delete(file_id);
+//    }
 
 
 }
