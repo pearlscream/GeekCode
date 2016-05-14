@@ -17,9 +17,8 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationTime;
 
-    @ManyToMany(cascade=CascadeType.ALL, mappedBy="users")
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "users")
     private List<Project> projects;
-
 
 
     public List<Project> getProjects() {

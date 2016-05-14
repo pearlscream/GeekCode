@@ -1,9 +1,7 @@
 package com.kpicoop.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -15,21 +13,23 @@ public class Project {
     private Integer id;
 
     private String title;
+
     private String description;
 
     private String image;
 
-    @JsonIgnore
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date deadline;
+
+//    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_project", joinColumns = @JoinColumn(name = "projectId"), inverseJoinColumns = @JoinColumn(name = "userId"))
-    private List<User> users = new ArrayList<>();
+    private List<User> users;
 
 
-    @JsonIgnore
+//    @JsonIgnore
     @OneToMany(mappedBy = "project")
-    private List<File> files = new ArrayList<>();
-
-
+    private List<File> files;
 
 
     public List<User> getUsers() {
@@ -78,5 +78,13 @@ public class Project {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Date getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
     }
 }

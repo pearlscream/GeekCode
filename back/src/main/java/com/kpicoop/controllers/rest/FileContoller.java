@@ -5,6 +5,7 @@ import com.kpicoop.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -25,10 +26,15 @@ public class FileContoller {
         return file;
     }
 
-//    @RequestMapping(value = "/{file_id}", method = RequestMethod.DELETE)
-//    public void updateFile(@PathVariable("file_id") final int file_id) {
-//        fileService.delete(file_id);
-//    }
+    @RequestMapping(value = "/{file_id}", method = RequestMethod.DELETE)
+    public void updateFile(@PathVariable("file_id") final int file_id) {
+        fileService.delete(file_id);
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public List<File> getProjectFiles(@PathVariable("project_id") final int project_id) {
+        return fileService.findByProjectId(project_id);
+    }
 
 
 }
