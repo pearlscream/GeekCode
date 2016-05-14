@@ -61,8 +61,8 @@ a {
 }
 .header__container{
   display: flex;
-  justify-content: flex-start;
-  outline: 1px solid #f00;
+  height: 10vh;
+  align-items: center;
 }
 
 .container_paddinged{
@@ -75,9 +75,6 @@ a {
 /*******   HEADER   *******/
 .main-page-header{
   background-color: #333;
-  height: 10vh;
-  align-items: center;
-  outline: 1px solid #f00;
 }
 .header__logo{
   float: left;
@@ -138,9 +135,9 @@ a {
   border-radius: 5px;
   overflow: hidden;
   position: absolute;
-  top: 0;
+  top: 5vh;
   right: 40px;
-  height: 90vh;
+  height: 75vh;
 }
 
 .validation-block__header{
