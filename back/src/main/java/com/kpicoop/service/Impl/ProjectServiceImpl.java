@@ -39,5 +39,10 @@ public class ProjectServiceImpl implements ProjectService {
         return projectRepository.saveAndFlush(project);
     }
 
+    @Override
+    public List<Project> findByUserId(int user_id) {
+        return projectRepository.findByUserId(user_id);
+    }
+
 
 }
