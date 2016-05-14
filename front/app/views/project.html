@@ -4,7 +4,34 @@
     <a ui-sref="polyana"><button type="submit" name="button" class="navbar__form-submit">Choose project</button></a>
   </form>
 </div>
-<div ng-model='example' ui-ace="aceOptions">Day cka json</div>
-<button type="button" name="button" ng-click="alertData()">SAVE</button>
+<div class="project-box">
+  <div class="project-box__project-structure project-structure">
+  <ul class="project-structure__list">
+    <li class="project-structure__folder"><a href="#">Folder 1</a></li>
+    <li class="project-structure__folder"><a href="#">Folder 2</a>
+    <ul class="folder__list">
+      <li class="folder__item"><a href="#">index.html</a></li>
+      <li class="folder__item"><a href="#">main.css</a></li>
+      <li class="folder__item"><a href="#">main.js</a></li>
+    </ul>
+    </li>
+    <li class="project-structure__folder"><a href="#">Folder 3</a></li>
+  </ul>
+  </div>
+  <div class="project-box__code-area code-area">
+    <div class="code_area__header">
+      <a href="#" class="code-area__item code-area__item_selected" data-index="0">index.html</a>
+      <a href="#" class="code-area__item" data-index="1">main.css</a>
+    </div>
+    <div class="code_area__content code_area__content_selected">
+      <div ng-model='example' ui-ace="aceOptions">Day cka json</div>
+      <button type="button" name="button" ng-click="alertData()">SAVE</button>
+    </div>
+    <div class="code_area__content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione earum unde facere ducimus fuga, eius quisquam qui dolore asperiores eveniet accusantium quas. Reiciendis voluptatum temporibus perspiciatis totam, minus soluta nesciunt.</p>
+    </div>
+      
+  </div>
+</div>
 
 
