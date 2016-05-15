@@ -187,54 +187,6 @@ a {
   font-family: 'droid_sans';
 }
 
-.validation-form__checkboxes{
-  margin-bottom: 25px;
-}
-
-.validation-form__checkboxes input {
-  vertical-align: top;
-  margin: 0 10px 0 0;
-  width: 17px;
-  height: 17px;
-}
-
-.validation-form__checkboxes input + label {
-  cursor: pointer;
-}
-
-
-/* Прячем оригинальный чекбокс. */
-.validation-form__checkboxes input:not(checked) {
-  position: absolute;
-  opacity: 0;
-}
-.validation-form__checkboxes input:not(checked) + label {
-  position: relative; /* будем позиционировать псевдочекбокс относительно label */
-  padding: 0 0 0 30px; /* оставляем слева от label место под псевдочекбокс */
-}
-/* Оформление первой части чекбокса в выключенном состоянии (фон). */
-.validation-form__checkboxes input:not(checked) + label:before {
-  content: '';
-  position: absolute;
-  top: 6px;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 100%;
-  background: #fff;
-  border: 1px solid #969696;
-  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
-}
-
-/* Меняем фон чекбокса, когда он включен. */
-.validation-form__checkboxes input:checked + label:before {
-  background: #3366cc;
-}
-
-.label_margined{
-  margin-right: 35px;
-}
-
 .validation-form__input_submit{
   font-family: 'droid_sans';
   font-weight: bold;
