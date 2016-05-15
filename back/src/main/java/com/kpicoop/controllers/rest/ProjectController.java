@@ -34,6 +34,7 @@ public class ProjectController {
         Project project = projectService.findById(projectId);
         System.out.println(project.getUsers());
         System.out.println(project.getComments());
+        System.out.println(project.getTasks());
         return project;
     }
 
@@ -60,7 +61,5 @@ public class ProjectController {
     public void addProject(@RequestBody Project project) {
         projectService.addProject(project);
     }
-
-
     
 }
