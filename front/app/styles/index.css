@@ -609,3 +609,100 @@ a {
 .code_area__content_selected{
   display: block;
 }
+
+/******** Page project ********/
+.cur-progect__wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'DroidSans';
+}
+.cur-progect__header{
+  width: 100%;
+  overflow: hidden;
+}
+.cur-project__title{
+  float: left;
+  color: #050505;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.cur-project__status{
+  float: right;
+  background-color: #009865;
+  padding: 5px 10px;
+  color: #fff;
+}
+.cur-project__about{
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 280px;
+  padding-left: 500px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.cur-project__img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pr_title{
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+.cur-project-lookf__info,
+.cur-project__info{
+  font-size: 18px;
+  color: #050505;
+  margin-bottom: 30px;
+}
+
+.cur-project-team{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.cur-project-team__title{
+  text-align: center;
+}
+
+.cur-project-team_item{
+  display: inline-block;
+}
+.cur-project-team_item:not(:last-child){
+  margin-right: 20px;
+}
+.team-member__img{
+  border-radius: 100%;
+  margin-bottom: 3px;
+}
+.team-member__name{
+  text-align: center;
+  color: #333333;
+  font-weight: bold;
+  font-size: 18px;
+}
+.cur-tasks{
+  width: 100%;
+}
+
+.task-item{
+  width: 100%;
+  position: relative;
+  padding-right: 200px;
+}
+.task-item__container{
+  background-color: #f6f4f4;
+}
+
+.task-item__button{
+  position: absolute;
+  display: block;
+  padding: 5px 20px;
+  background-color: #009966;
+  color: #fff;
+  font-size: 24px;
+  left: 0;
+  top: 0;
+}
