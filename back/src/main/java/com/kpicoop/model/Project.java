@@ -28,6 +28,8 @@ public class Project implements java.io.Serializable{
 
     private String tasks;
 
+    private Integer views;
+
 
     @ManyToOne(cascade = CascadeType.ALL)
     private User author;
@@ -140,5 +142,13 @@ public class Project implements java.io.Serializable{
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public Integer getViews() {
+        return views;
+    }
+
+    public void setViews(Integer views) {
+        this.views = views;
     }
 }
