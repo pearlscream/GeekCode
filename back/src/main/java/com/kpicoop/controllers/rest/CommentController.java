@@ -11,7 +11,7 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.POST)
     public Comment getFile(@RequestBody Comment comment) {
         return commentService.saveComment(comment);
     }
