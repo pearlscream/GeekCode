@@ -3,7 +3,6 @@ package com.kpicoop.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,6 +19,8 @@ public class Project implements java.io.Serializable{
     private String title;
 
     private String description;
+
+    private String gitRepo;
 
     private byte[] imageFile;
 
@@ -100,5 +101,13 @@ public class Project implements java.io.Serializable{
 
     public void setAuthor(User author) {
         this.author = author;
+    }
+
+    public String getGitRepo() {
+        return gitRepo;
+    }
+
+    public void setGitRepo(String gitRepo) {
+        this.gitRepo = gitRepo;
     }
 }
