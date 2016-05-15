@@ -31,8 +31,8 @@
 </div>
 <div class="cur-project__comment-block com-block">
 	<form class="com-form">
-		<input type="text" class="com-block__input" placeholder="Write your comment">
-		<input type="submit" class="com-block__add-button" value="Add comment">
+		<input type="text" class="com-block__input" placeholder="Write your comment" ng-model="comment.text">
+		<input type="submit" class="com-block__add-button" value="Add comment" ng-click="addComment()">
 	</form>
 	<div class="comm-wrapper">
 	<div class="com-block__comments proj-comments" ng-repeat="comment in project.comments">
@@ -53,7 +53,7 @@
     var addBtn = $('.com-block__add-button');
 
     addBtn.prop('disabled',true);
-        
+
     inputField.keyup(function(){
       addBtn.prop('disabled', this.value == "" ? true : false);
     });

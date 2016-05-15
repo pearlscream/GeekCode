@@ -14,6 +14,7 @@
 			<p class="project-item__description">{{project.description}}</p>
       <h4 style="position: absolute;right: 40%;color: #3366cc; bottom:30px;">Name:{{project.author.name}}</h4>
       <p style="position: absolute;bottom: 30px; color:#2B3F7B;">Need: {{project.need}}</p>
+      <p style="position: absolute;bottom: 50px; color:red;">{{project.views}}</p>
       <p ng-hide="project.new"><img src="http://www.abci-english.at/Graphics/Active.gif" alt="" style="position: absolute;width: 100px;height: auto;top: 5px;right: 5px;"></p>
       <p ng-show="project.new"><img src="http://thetyger.com/wp-content/uploads/2014/03/new.png" alt="" style="position: absolute;width: 80px;height: 80px;top: 5px;right: 5px;"></p>
 			<a ng-href="#/{{project.id}}" class="project-item__button project-item__button_blue">Open project</a>
