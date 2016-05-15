@@ -408,12 +408,12 @@ a {
 .project-item{
   width: 100%;
   padding: 30px;
-  padding-left: 310px;
+  padding-left: 240px;
   background-color: #efefef;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  min-height: 310px;
+  min-height: 210px;
   border-radius: 5px;
 }
 .polyana__item:not(:last-child){
@@ -424,6 +424,8 @@ a {
   position: absolute;
   top: 30px;
   left: 30px;
+  width: 150px;
+height: 150px;
 }
 
 .project-item__title{
@@ -451,6 +453,9 @@ a {
   font-size: 20px;
   padding: 10px 13px;
   border-radius: 3px;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
 }
 .project-item__button_blue{
   background-color: #3263f8;
