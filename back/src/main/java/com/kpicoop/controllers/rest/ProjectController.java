@@ -33,6 +33,7 @@ public class ProjectController {
     public Project getProject(@PathVariable int projectId) {
         Project project = projectService.findById(projectId);
         System.out.println(project.getUsers());
+        System.out.println(project.getComments());
         return project;
     }
 
