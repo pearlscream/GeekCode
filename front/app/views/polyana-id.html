@@ -1,59 +1,40 @@
-<div class="cur-progect__wrapper">
+<div ng-show="loading" style="text-align:center;"><img src="http://www.kuban-online.ru/static/img/preloader.gif" style="widht:100px;height:100px; margin:0 auto; margin-top:100px;" alt="Loading"></div>
+<div ng-hide="loading" class="cur-progect__wrapper">
 <div class="cur-progect__header">
-	<h1 class="cur-project__title">This is title</h1>
+	<h1 class="cur-project__title">{{project.title}}</h1>
 	<div class="cur-project__status">Active</div>
 </div>
 <div class="cur-project__about">
-	<img src="http://lorempixel.com/400/280" width="400" height="280" alt="" class="cur-project__img">
+	<img ng-src="data:image/jpeg;base64,{{project.imageFile}}" width="400" height="280" alt="" class="cur-project__img">
 	<h2 class="cur-project-ab__title pr_title">About</h2>
-	<p class="cur-project__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus asperiores odit dolore rem nam fuga ipsa officia culpa ullam, eaque, autem nisi? Repellat eius, iure laudantium. Explicabo a tempore officiis?</p>
+	<p class="cur-project__info">{{project.description}}</p>
 	<h2 class="cur-project-lookf__title pr_title">Looking for</h2>
-	<p class="cur-project-lookf__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptatibus similique rerum voluptates qui beatae, voluptas, necessitatibus nesciunt architecto neque eaque. Libero, ipsam officiis sapiente ipsum obcaecati quos aperiam odio.</p>
+	<p class="cur-project-lookf__info">{{project.need}}</p>
 </div>
 <div class="cur-project__team cur-project-team">
 	<h2 class="cur-project-team__title pr_title">Team</h2>
-	<div class="cur-project-team_item team-member">
-		<img src="http://lorempixel.com/130/130" width="130" height="130" alt="" class="team-member__img">
-		<div class="team-member__name">Name</div>
-	</div>
-	<div class="cur-project-team_item team-member">
-		<img src="http://lorempixel.com/130/130" width="130" height="130" alt="" class="team-member__img">
-		<div class="team-member__name">Name</div>
-	</div>
-	<div class="cur-project-team_item team-member">
-		<img src="http://lorempixel.com/130/130" width="130" height="130" alt="" class="team-member__img">
-		<div class="team-member__name">Name</div>
+	<div class="cur-project-team_item team-member" ng-repeat="teamPlayer in project.users">
+		<img ng-src="data:image/jpeg;base64,{{teamPlayer.photoFile}}" width="130" height="130" alt="" class="team-member__img">
+		<div class="team-member__name">{{teamPlayer.name}}</div>
 	</div>
 </div>
 <div class="cur-project__tasks cur-tasks">
 	<h2 class="cur-tasks__title pr_title">Tasks</h2>
-	<div class="cur-tasks__item task-item">
+	<div class="cur-tasks__item task-item" ng-repeat="comment in project.comments">
 		<div class="task-item__container">
-			<div class="task-item__title">This is task title</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi aliquid asperiores et officia, quis, enim inventore dolores voluptate deleniti incidunt iusto quia obcaecati, reiciendis quibusdam! Praesentium vel, distinctio minima sequi.</p>
-			<a href="#" class="task-item__button">Apply</a>
-		</div>
-	</div>
-	<div class="cur-tasks__item task-item">
-		<div class="task-item__container">
-			<div class="task-item__title">This is task title</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi aliquid asperiores et officia, quis, enim inventore dolores voluptate deleniti incidunt iusto quia obcaecati, reiciendis quibusdam! Praesentium vel, distinctio minima sequi.</p>
+			<div class="task-item__title">{{comment.text}}</div>
+			<p>{{comment.text}}</p>
 			<a href="#" class="task-item__button">Apply</a>
 		</div>
 	</div>
 </div>
 <div class="cur-project__comment-block com-block">
 	<input type="text" class="com-block__input" placeholder="Write your comment">
-	<div class="com-block__comments proj-comments">
+	<div class="com-block__comments proj-comments" ng-repeat="comment in project.comments">
 		<div class="proj-comments__item">
-			<img src="http://lorempixel.com/70/70" width="70" height="70" alt="">
-			<p>This is comment. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatum magni provident numquam, tenetur ab possimus laudantium praesentium mollitia, ipsa error sit officiis dignissimos iusto inventore! Totam illo reiciendis atque?</p>
-		</div>
-		<div class="proj-comments__item">
-			<img src="http://lorempixel.com/70/70" width="70" height="70" alt="">
-			<p>This is comment. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatum magni provident numquam, tenetur ab possimus laudantium praesentium mollitia, ipsa error sit officiis dignissimos iusto inventore! Totam illo reiciendis atque?</p>
+			<img ng-src="data:image/jpeg;base64,{{comment.author.photoFile}}" width="70" height="70" alt="">
+			<p>{{comment.text}}</p>
 		</div>
 	</div>
 </div>
 </div>
-

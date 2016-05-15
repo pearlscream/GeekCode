@@ -1,1 +1,30 @@
-CreateProject
+<div class="create-wrapper">
+	<div class="profile__info user-info">
+		<img src="http://lorempixel.com/160/160" alt="" width="160" height="160" class="user-info__img">
+		<h2 class="user-info__name">Alex Budko</h2>
+		<input type="text" class="user-info__faculty" value="TEF TR-42" disabled>
+		<div class="user-info__email">alexdima@kpicoop.com</div>
+	</div>
+	<div class="create__user-project add-project">
+		<h2>Enter information about project</h2>
+		<form method="POST" id="formx" action="" class="add-project__form">
+			<div class="add-project__checkboxes">
+				<input type="radio" name="prStatus" id="active" value="active" checked><label class="status-lable" for="active">Customer</label>
+				<input type="radio" name="prStatus" id="new" value="new"><label class="status-lable" for="new">Developer</label>
+			</div>
+			<input type="text" name="prName" placeholder="Name of project" class="add-project__name" required>
+			<textarea name="prDescr" class="add-project__description" placeholder="Description of project" required></textarea>
+			<div class="add-project__image-upload">
+				<label for="image-upload">
+					<img src="../images/placeholder.jpg" width="400"/>
+				</label>
+				<input id="image-upload" type="file"/>
+			</div>
+			<h2>Project tasks</h2>
+			<input name="taskName" type="text" placeholder="Task" class="add-project__name">
+			<textarea name="taskDescr" class="add-project__description" placeholder="Description of task"></textarea>
+			<a href="#" class="add-project__task">+ Add one more task</a>
+			<button id="submit" class="submit-button">Create project</button>
+		</form>
+	</div>
+</div>
