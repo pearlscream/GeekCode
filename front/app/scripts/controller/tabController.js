@@ -1,19 +1,13 @@
     var myTab = function(tabHeader, tabTitleClass, tabItemClass){
-        console.log(tabHeader);
         this.tabItems = $('.'+tabItemClass).toArray();
         this.tabTitles = $('.'+tabTitleClass).toArray();
-        console.log(this.tabItems);
-        console.log(this.tabTitles);
 
         this.selectedItem = tabItemClass +'_selected';
         this.selectedTitle = tabTitleClass +'_selected';
-        console.log(this.selectedItem);
-        console.log(this.selectedTitle);
         var __self = this;
 
         tabHeader.click(function(e){
             e.preventDefault();
-            console.log('yopt');
 
             var tabIndex = $(e.target).data('index');
 
@@ -33,7 +27,5 @@
         });
 
     };
-    console.log('heeeey');
     
     var firstTabs = new myTab($('.validation-block__header'),'validation-block__item','validation-block__content');
-    var secondTabs = new myTab($('.code_area__header'),'code-area__item','code_area__content');
