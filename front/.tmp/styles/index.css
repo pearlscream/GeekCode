@@ -644,10 +644,14 @@ height: 150px;
 }
 
 /******** Page project ********/
+.cur-pr{
+  background-color: #eee;
+}
 .cur-progect__wrapper{
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'DroidSans';
+  padding-top: 20px;
 }
 .cur-progect__header{
   width: 100%;
@@ -729,7 +733,7 @@ height: 150px;
 }
 
 .task-item__container{
-  background-color: #f6f4f4;
+  background-color: #333;
   width: 100%;
   box-sizing: border-box;
   padding: 15px 30px;
@@ -760,29 +764,40 @@ height: 150px;
 }
 .task-item__container p{
   font-weight: bold;
-  color: #666;
+  color: #fff;
   font-size: 18px;
   padding: 0 10px;
 }
 
 .cur-project__comment-block{
   padding: 20px 30px;
-  background-color: #f6f4f4;
+  background-color: #333;
+  white-space: nowrap;
 }
 .com-block__input{
-  width: 100%;
+  width: 80%;
   font-size: 20px;
   color: #999;
   border: none;
-  display: block;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+.com-block__add-button{
+  color: #414141;
+  border: none;
+  display: inline-block;
   margin-bottom: 30px;
   padding: 5px 10px;
+  background-color: #ccc;
 }
 .proj-comments__item{
   width: 100%;
   position: relative;
   padding-left: 90px;
   min-height: 90px;
+  box-sizing: border-box;
 }
 
 .proj-comments__item img{
@@ -792,10 +807,12 @@ height: 150px;
   border-radius: 100%;
 }
 .proj-comments__item p{
-  background-color: #fff;
+  background-color: #ccc;
   padding: 10px 20px;
   font-size: 16px;
   color: #414141;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /******* CREATE PROJECT **********/

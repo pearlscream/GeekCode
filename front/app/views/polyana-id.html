@@ -1,4 +1,5 @@
 <div ng-show="loading" style="text-align:center;"><img src="http://penews.org/Content/PENews/Images/loader.gif" style="widht:100px;height:100px; margin:0 auto; margin-top:100px;" alt="Loading"></div>
+<div class="cur-pr">
 <div ng-hide="loading" class="cur-progect__wrapper">
 <div class="cur-progect__header">
 	<h1 class="cur-project__title">{{project.title}}</h1>
@@ -30,11 +31,13 @@
 </div>
 <div class="cur-project__comment-block com-block">
 	<input type="text" class="com-block__input" placeholder="Write your comment">
+	<a class="com-block__add-button" href="#">Add comment</a>
 	<div class="com-block__comments proj-comments" ng-repeat="comment in project.comments">
 		<div class="proj-comments__item">
 			<img ng-src="data:image/jpeg;base64,{{comment.author.photoFile}}" width="70" height="70" alt="">
 			<p>{{comment.text}}</p>
 		</div>
 	</div>
+</div>
 </div>
 </div>
