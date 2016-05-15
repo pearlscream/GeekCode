@@ -21,7 +21,7 @@ m-c - middle center
 
 body {
   margin: 0;
-  background-color: white;
+  background-color: #333;
   font-family: DroidBold, sans-serif;
 }
 a {
@@ -43,6 +43,9 @@ a {
 
 .link-b {
   color: #3366cc;
+}
+.link-w{
+  color: #fff;
 }
 .link-g {
   color: #333333;
@@ -210,13 +213,12 @@ a {
   color: #666666;
 }
 .active {
-  background-color: white !important;
   text-decoration: underline;
 
 }
-.active a {
+/*.active a {
   color: #3366cc !important;
-}
+}*/
 .ace_editor { height: 200px; }
 /*Blog main and blog right line*/
 
@@ -457,6 +459,14 @@ height: 150px;
   bottom: 25px;
   right: 30px;
 }
+.project-items__button{
+  display: block;
+  float: right;
+  margin-right: 20px;
+  font-size: 20px;
+  padding: 10px 13px;
+  border-radius: 3px;
+}
 .project-item__button_blue{
   background-color: #3263f8;
   color: #fff;
@@ -525,12 +535,29 @@ height: 150px;
   background-color: #efefef;
 }
 
-.user-projects__title{
-  font-size: 30px;
+.user-projects__title,
+.user-descr__title{
+  font-size: 20px;
   color: #797a7b;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   letter-spacing: 1px;
 }
+.user-descr{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.user-page__title{
+  font-size: 30px;
+  color: #797a7b;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.user-work{
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+
 
 /************** WORKING-AREA   ***********/
 .project-menu{

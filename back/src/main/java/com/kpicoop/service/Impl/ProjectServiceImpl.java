@@ -6,6 +6,7 @@ import com.kpicoop.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -16,16 +17,32 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project findById(int id) {
-        return projectRepository.findOne(id);
+        Project project = projectRepository.findOne(id);
+        int views = project.getViews();
+        project.setViews(++views);
+        projectRepository.saveAndFlush(project);
+        return project;
     }
 
     @Override
     public List<Project> getProjects() {
-        return projectRepository.findAll();
+        List<Project> projects = projectRepository.findAll();
+        projects.sort(new Comparator<Project>() {
+            @Override
+            public int compare(Project o1, Project o2) {
+                if (o1.getViews() > o2.getViews())
+                    return -1;
+                else if (o1.getViews() == o2.getViews())
+                    return 0;
+                else return +1;
+            }
+        });
+        return projects;
     }
 
     @Override
     public Project addProject(Project project) {
+        project.setViews(1);
         return projectRepository.saveAndFlush(project);
     }
 
