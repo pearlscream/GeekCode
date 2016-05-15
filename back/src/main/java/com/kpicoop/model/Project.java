@@ -24,13 +24,16 @@ public class Project implements java.io.Serializable{
 
     private byte[] imageFile;
 
+    private String need;
+
+    private String tasks;
+
 
     @ManyToOne(cascade = CascadeType.ALL)
     private User author;
 
     private boolean isNew;
 
-//    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_project", joinColumns = @JoinColumn(name = "projectId"), inverseJoinColumns = @JoinColumn(name = "userId"))
     private List<User> users;
@@ -105,6 +108,22 @@ public class Project implements java.io.Serializable{
 
     public void setAuthor(User author) {
         this.author = author;
+    }
+
+    public String getNeed() {
+        return need;
+    }
+
+    public void setNeed(String need) {
+        this.need = need;
+    }
+
+    public String getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(String tasks) {
+        this.tasks = tasks;
     }
 
     public String getGitRepo() {

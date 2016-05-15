@@ -32,6 +32,7 @@ public class ProjectController {
     @RequestMapping(value = "{projectId}", method = RequestMethod.GET)
     public Project getProject(@PathVariable int projectId) {
         Project project = projectService.findById(projectId);
+        System.out.println(project.getUsers());
         return project;
     }
 
@@ -46,7 +47,17 @@ public class ProjectController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public List<Project> getProjects() {
         List<Project> projects = projectService.getProjects();
+        System.out.println();
         return projects;
     }
+
+    @ResponseBody
+    @CrossOrigin(origins = "http://localhost:9000")
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public void addProject(@RequestBody Project project) {
+        projectService.addProject(project);
+    }
+
+
     
 }
