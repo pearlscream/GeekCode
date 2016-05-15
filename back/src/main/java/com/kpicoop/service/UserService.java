@@ -2,6 +2,8 @@ package com.kpicoop.service;
 
 import com.kpicoop.model.User;
 
+import java.util.List;
+
 
 public interface UserService {
 
@@ -11,4 +13,5 @@ public interface UserService {
 //    User findByUsername(String name);
     User saveUser(User user);
 
+    List<User> findByProjectId(int projectId);
 }

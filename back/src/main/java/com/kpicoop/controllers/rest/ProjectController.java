@@ -3,15 +3,10 @@ package com.kpicoop.controllers.rest;
 import com.kpicoop.model.Project;
 import com.kpicoop.model.User;
 import com.kpicoop.service.ProjectService;
+import com.kpicoop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.DefaultResourceLoader;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,12 +14,18 @@ import java.util.List;
  * v.0.1
  *
  */
+
+
+// project title photo need (active or new) author description
 @RestController
 @RequestMapping(value = "/rest/api/v1/project/")
 public class ProjectController {
 
     @Autowired
     private ProjectService projectService;
+
+    @Autowired
+    private UserService userService;
 
     @ResponseBody
     @CrossOrigin(origins = "http://localhost:9000")
@@ -34,6 +35,12 @@ public class ProjectController {
         return project;
     }
 
+    @RequestMapping(value = "{projectId}/users", method = RequestMethod.GET)
+    public List<User> getProjectUsers(@PathVariable int projectId) {
+        List<User> users = userService.findByProjectId(projectId);
+        return users;
+    }
+
     @ResponseBody
     @CrossOrigin(origins = "http://localhost:9000")
     @RequestMapping(value = "", method = RequestMethod.GET)
@@ -41,7 +48,5 @@ public class ProjectController {
         List<Project> projects = projectService.getProjects();
         return projects;
     }
-
-
-
+    
 }

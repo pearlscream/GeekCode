@@ -1,6 +1,8 @@
 package com.kpicoop.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class User {
     @Column(name = "userId")
     private Integer id;
 
-
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "users")
     private List<Project> projects;
 

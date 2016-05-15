@@ -1,12 +1,17 @@
 package com.kpicoop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
+
+
+// project title photo need (active or new) author description
 
 @Entity
 @Table(name = "projects")
-public class Project {
+public class Project implements java.io.Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "projectId")
@@ -16,21 +21,22 @@ public class Project {
 
     private String description;
 
-    private String image;
+    private byte[] imageFile;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date deadline;
 
-//    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.ALL)
+    private User author;
+
+    private boolean isNew;
+
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_project", joinColumns = @JoinColumn(name = "projectId"), inverseJoinColumns = @JoinColumn(name = "userId"))
     private List<User> users;
 
-
-//    @JsonIgnore
+    @JsonIgnore
     @OneToMany(mappedBy = "project")
     private List<File> files;
-
 
     public List<User> getUsers() {
         return users;
@@ -64,14 +70,6 @@ public class Project {
         this.files = files;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -80,11 +78,27 @@ public class Project {
         this.title = title;
     }
 
-    public Date getDeadline() {
-        return deadline;
+    public byte[] getImageFile() {
+        return imageFile;
     }
 
-    public void setDeadline(Date deadline) {
-        this.deadline = deadline;
+    public void setImageFile(byte[] imageFile) {
+        this.imageFile = imageFile;
+    }
+
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public void setNew(boolean aNew) {
+        isNew = aNew;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
     }
 }
