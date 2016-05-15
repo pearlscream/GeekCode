@@ -7,10 +7,16 @@
 </div>
 	<div class="polyana-container">
 		<h1 class="polyana__title">Choose project which do you like improve</h1>
+
 		<div class="polyana__item project-item" ng-repeat="project in projects">
 			<img ng-src="data:image/jpeg;base64,{{project.imageFile}}"  alt="" width="250" height="250" class="project-item__img">
 			<h2 class="project-item__title">{{project.title}}</h2>
-			<p class="project-item__description">{{project.description}}<a class="project-item__more-link" ng-href="#/project/{{project.id}}">...Read more</a></p>
-			<a ng-href="#/project/{{project.id}}" class="project-item__button project-item__button_blue">Choose project</a>
+			<p class="project-item__description">{{project.description}}</p>
+      <h4 style="position: absolute;right: 40%;color: #3366cc; bottom:30px;">Name:{{project.author.name}}</h4>
+      <p style="position: absolute;bottom: 30px; color:#2B3F7B;">Need: {{project.need}}</p>
+      <p ng-hide="project.new"><img src="http://www.abci-english.at/Graphics/Active.gif" alt="" style="position: absolute;width: 100px;height: auto;top: 5px;right: 5px;"></p>
+      <p ng-show="project.new"><img src="http://thetyger.com/wp-content/uploads/2014/03/new.png" alt="" style="position: absolute;width: 80px;height: 80px;top: 5px;right: 5px;"></p>
+			<a ng-href="#/project/{{project.id}}" class="project-item__button project-item__button_blue">Open project</a>
 		</div>
 	</div>
+  <div ng-show="loading" style="text-align:center;"><img src="http://www.kuban-online.ru/static/img/preloader.gif" style="widht:60px;height:60px; margin:0 auto; margin-top:20px;" alt="Loading"></div>

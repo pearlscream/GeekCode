@@ -11,4 +11,5 @@ public interface ProjectService {
     Project addProject(Project project);
     void delete(int id);
     Project saveProject(Project project);
+    List<Project> findByUserId(int user_id);
 }

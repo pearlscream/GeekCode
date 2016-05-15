@@ -432,12 +432,12 @@ export default StyleSheet.create({
         "paddingTop": 30,
         "paddingRight": 30,
         "paddingBottom": 30,
-        "paddingLeft": 310,
+        "paddingLeft": 240,
         "backgroundColor": "#efefef",
         "boxSizing": "border-box",
         "position": "relative",
         "overflow": "hidden",
-        "minHeight": 310,
+        "minHeight": 210,
         "borderRadius": 5
     },
     "polyana__item:not(:last-child)": {
@@ -446,7 +446,9 @@ export default StyleSheet.create({
     "project-item__img": {
         "position": "absolute",
         "top": 30,
-        "left": 30
+        "left": 30,
+        "width": 150,
+        "height": 150
     },
     "project-item__title": {
         "marginTop": 15,
@@ -476,7 +478,10 @@ export default StyleSheet.create({
         "paddingRight": 13,
         "paddingBottom": 10,
         "paddingLeft": 13,
-        "borderRadius": 3
+        "borderRadius": 3,
+        "position": "absolute",
+        "bottom": 25,
+        "right": 30
     },
     "project-item__button_blue": {
         "backgroundColor": "#3263f8",
