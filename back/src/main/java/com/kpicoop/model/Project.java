@@ -26,11 +26,13 @@ public class Project implements java.io.Serializable{
 
     private String need;
 
-    private String tasks;
+    @OneToMany(mappedBy = "project")
+    private List<Task> tasks;
 
     private Integer views;
 
 
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
     private User author;
 
@@ -120,11 +122,11 @@ public class Project implements java.io.Serializable{
         this.need = need;
     }
 
-    public String getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
-    public void setTasks(String tasks) {
+    public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
     }
 
