@@ -21,7 +21,7 @@ m-c - middle center
 
 body {
   margin: 0;
-  background-color: white;
+  background-color: #333;
   font-family: DroidBold, sans-serif;
 }
 a {
@@ -43,6 +43,9 @@ a {
 
 .link-b {
   color: #3366cc;
+}
+.link-w{
+  color: #fff;
 }
 .link-g {
   color: #333333;
@@ -210,13 +213,12 @@ a {
   color: #666666;
 }
 .active {
-  background-color: white !important;
   text-decoration: underline;
 
 }
-.active a {
+/*.active a {
   color: #3366cc !important;
-}
+}*/
 .ace_editor { height: 200px; }
 /*Blog main and blog right line*/
 
