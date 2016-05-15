@@ -30,15 +30,17 @@
 	</div>
 </div>
 <div class="cur-project__comment-block com-block">
-	<form action="" class="com-form" method="post">
+	<form class="com-form">
 		<input type="text" class="com-block__input" placeholder="Write your comment">
 		<input type="submit" class="com-block__add-button" value="Add comment">
 	</form>
+	<div class="comm-wrapper">
 	<div class="com-block__comments proj-comments" ng-repeat="comment in project.comments">
 		<div class="proj-comments__item">
 			<img ng-src="data:image/jpeg;base64,{{comment.author.photoFile}}" width="70" height="70" alt="">
 			<p>{{comment.text}}</p>
 		</div>
+	</div>
 	</div>
 </div>
 </div>
@@ -47,14 +49,20 @@
 	$(function(){
 		var form = $('.com-form');
     var inputField = $('.com-block__input');
-    var toDoList = $('.com-block');
+    var toDoList = $('.comm-wrapper');
     var addBtn = $('.com-block__add-button');
+
+    addBtn.prop('disabled',true);
+        
+    inputField.keyup(function(){
+      addBtn.prop('disabled', this.value == "" ? true : false);
+    });
 
     form.submit(function(e){
       e.preventDefault();
       var tmpl = '<div class="com-block__comments proj-comments" ng-repeat="comment in project.comments"><div class="proj-comments__item"><img src="http://lorempixel.com/70/70" width="70" height="70" alt=""><p>:text</p></div></div>';
       var myHtml = tmpl.replace(/:text/gi, inputField.val())
-      toDoList.append(myHtml);
+      toDoList.prepend(myHtml);
       form.trigger('reset');
         });
 
