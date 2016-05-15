@@ -1,6 +1,5 @@
 angular.module('koya').controller('idProjectController', ['$scope','$state', '$stateParams','$http',
 function($scope, $state, $stateParams,$http) {
-  debugger;
   $scope.id = $stateParams.id;
 
   $scope.loading = true;

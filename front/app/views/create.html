@@ -7,24 +7,26 @@
 	</div>
 	<div class="create__user-project add-project">
 		<h2>Enter information about project</h2>
-		<form method="POST" id="formx" action="" class="add-project__form">
+		<form id="formx" class="add-project__form" ng-submit="submitForm()">
 			<div class="add-project__checkboxes">
-				<input type="radio" name="prStatus" id="active" value="active" checked><label class="status-lable" for="active">Customer</label>
-				<input type="radio" name="prStatus" id="new" value="new"><label class="status-lable" for="new">Developer</label>
+				<input type="radio" name="prStatus" id="active" value="active" checked><label class="status-lable" for="active">Active Project</label>
+				<input type="radio" name="prStatus" id="new" value="new"><label class="status-lable" for="new">New Project</label>
 			</div>
-			<input type="text" name="prName" placeholder="Name of project" class="add-project__name" required>
-			<textarea name="prDescr" class="add-project__description" placeholder="Description of project" required></textarea>
+			<input type="text" name="prName" placeholder="Name of project" class="add-project__name" required ng-model="user.title">
+			<textarea name="prDescr" class="add-project__description" placeholder="Description of project" required ng-model="user.description"></textarea>
+			<input type="text" placeholder="Who you need" class="add-project__name" required ng-model="user.need">
+			<input type="text" placeholder="gitHub link" class="add-project__name" required ng-model="user.git">
 			<div class="add-project__image-upload">
 				<label for="image-upload">
 					<img src="../images/placeholder.jpg" width="400"/>
 				</label>
-				<input id="image-upload" type="file"/>
+				<input id="image-upload" type="file" ng-model="user.img"/>
 			</div>
 			<h2>Project tasks</h2>
 			<input name="taskName" type="text" placeholder="Task" class="add-project__name">
 			<textarea name="taskDescr" class="add-project__description" placeholder="Description of task"></textarea>
 			<a href="#" class="add-project__task">+ Add one more task</a>
-			<button id="submit" class="submit-button">Create project</button>
+			<button id="submit" class="submit-button" type="submit">Create project</button>
 		</form>
 	</div>
 </div>

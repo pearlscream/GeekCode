@@ -4,7 +4,7 @@ var app = angular.module('koya', ['ui.router','ui.ace','ngAnimate']);
       var title = function (page) {
         return page + ' | KPIcoop';
     };
-
+    $urlRouterProvider.when('', '/polyana');
     $stateProvider
         /*project and children project elements*/
         .state('project', {
