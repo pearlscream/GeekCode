@@ -19,6 +19,10 @@ public class User {
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "users")
     private List<Project> projects;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "author")
+    private List<Comment> comments;
+
     private byte[] photoFile;
 
     private String name;
@@ -83,5 +87,13 @@ public class User {
 
     public void setSkills(String skills) {
         this.skills = skills;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }
