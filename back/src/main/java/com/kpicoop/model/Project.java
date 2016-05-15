@@ -30,7 +30,7 @@ public class Project implements java.io.Serializable{
 
     private boolean isNew;
 
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_project", joinColumns = @JoinColumn(name = "projectId"), inverseJoinColumns = @JoinColumn(name = "userId"))
     private List<User> users;
@@ -38,6 +38,10 @@ public class Project implements java.io.Serializable{
     @JsonIgnore
     @OneToMany(mappedBy = "project")
     private List<File> files;
+
+//    @JsonIgnore
+    @OneToMany(mappedBy = "project")
+    private List<Comment>  comments;
 
     public List<User> getUsers() {
         return users;
@@ -109,5 +113,13 @@ public class Project implements java.io.Serializable{
 
     public void setGitRepo(String gitRepo) {
         this.gitRepo = gitRepo;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }
