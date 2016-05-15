@@ -30,8 +30,10 @@
 	</div>
 </div>
 <div class="cur-project__comment-block com-block">
-	<input type="text" class="com-block__input" placeholder="Write your comment">
-	<a class="com-block__add-button" href="#">Add comment</a>
+	<form action="" class="com-form" method="post">
+		<input type="text" class="com-block__input" placeholder="Write your comment">
+		<input type="submit" class="com-block__add-button" value="Add comment">
+	</form>
 	<div class="com-block__comments proj-comments" ng-repeat="comment in project.comments">
 		<div class="proj-comments__item">
 			<img ng-src="data:image/jpeg;base64,{{comment.author.photoFile}}" width="70" height="70" alt="">
@@ -41,3 +43,25 @@
 </div>
 </div>
 </div>
+<script>
+	$(function(){
+		var form = $('.com-form');
+    var inputField = $('.com-block__input');
+    var toDoList = $('.com-block');
+    var addBtn = $('.com-block__add-button');
+
+    form.submit(function(e){
+      e.preventDefault();
+      var tmpl = '<div class="com-block__comments proj-comments" ng-repeat="comment in project.comments"><div class="proj-comments__item"><img src="http://lorempixel.com/70/70" width="70" height="70" alt=""><p>:text</p></div></div>';
+      var myHtml = tmpl.replace(/:text/gi, inputField.val())
+      toDoList.append(myHtml);
+      form.trigger('reset');
+        });
+
+
+
+
+
+
+});
+</script>
