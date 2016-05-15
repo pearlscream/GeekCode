@@ -48,7 +48,9 @@ public class ProjectController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public List<Project> getProjects() {
         List<Project> projects = projectService.getProjects();
-        System.out.println();
+        for (Project project : projects) {
+            System.out.println(project.getComments());
+        }
         return projects;
     }
 
