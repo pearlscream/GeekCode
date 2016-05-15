@@ -20,10 +20,10 @@
 </div>
 <div class="cur-project__tasks cur-tasks">
 	<h2 class="cur-tasks__title pr_title">Tasks</h2>
-	<div class="cur-tasks__item task-item" ng-repeat="comment in project.comments">
+	<div class="cur-tasks__item task-item" ng-repeat="task in project.tasks">
 		<div class="task-item__container">
-			<div class="task-item__title">{{comment.text}}</div>
-			<p>{{comment.text}}</p>
+			<div class="task-item__title">{{task.name}}</div>
+			<p>{{task.description}}</p>
 			<a href="#" class="task-item__button">Apply</a>
 		</div>
 	</div>
