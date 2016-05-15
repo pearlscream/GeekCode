@@ -17,7 +17,11 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project findById(int id) {
-        return projectRepository.findOne(id);
+        Project project = projectRepository.findOne(id);
+        int views = project.getViews();
+        project.setViews(++views);
+        projectRepository.saveAndFlush(project);
+        return project;
     }
 
     @Override
