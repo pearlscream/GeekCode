@@ -16,7 +16,7 @@
       <p style="position: absolute;bottom: 30px; color:#2B3F7B;">Need: {{project.need}}</p>
       <p ng-hide="project.new"><img src="http://www.abci-english.at/Graphics/Active.gif" alt="" style="position: absolute;width: 100px;height: auto;top: 5px;right: 5px;"></p>
       <p ng-show="project.new"><img src="http://thetyger.com/wp-content/uploads/2014/03/new.png" alt="" style="position: absolute;width: 80px;height: 80px;top: 5px;right: 5px;"></p>
-			<a ng-href="#/project/{{project.id}}" class="project-item__button project-item__button_blue">Open project</a>
+			<a ng-href="#/{{project.id}}" class="project-item__button project-item__button_blue">Open project</a>
 		</div>
 	</div>
   <div ng-show="loading" style="text-align:center;"><img src="http://www.kuban-online.ru/static/img/preloader.gif" style="widht:60px;height:60px; margin:0 auto; margin-top:20px;" alt="Loading"></div>
